@@ -4,8 +4,6 @@ import connectDB from './config/db.js';
 
 configDotenv();
 
-console.log(process.env)
-
 connectDB();
 
 const PORT = 4000;

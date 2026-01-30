@@ -4,16 +4,16 @@ import {
   register,
   deleteUser,
   logout,
-  getUser,
 } from '../controllers/userController.js';
+import { authMiddleware } from '../middleware/auth.middleware.js';
 
 const router = express.Router();
 
-router.get('/', getUser);
 router.post('/register', register);
 router.post('/login', login);
-router.post('/logout', logout);
-router.delete('/', deleteUser);
+
+router.post('/logout', authMiddleware, logout);
+router.delete('/me', authMiddleware, deleteUser);
 
 export default router;
 

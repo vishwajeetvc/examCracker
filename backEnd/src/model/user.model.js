@@ -1,22 +1,29 @@
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 
-const userSchema = new mongoose.Schema(
-  {
+const userSchema = new mongoose.Schema({
+
     username: {
       type: String,
       required: true,
       unique: true,
       lowercase: true,
       trim: true,
-      minlength: 3
+      minlength: 3,
+      max : 30
     },
 
     password: {
       type: String,
       required: true,
       minlength: 6,
-      select: false  
+      select: false,
+      max : 50
+    },
+    role : {
+      type : String,
+      enum : ["user", "admin"],
+      default : "user"
     }
   },
   { timestamps: true }
