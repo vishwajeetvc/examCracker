@@ -80,7 +80,7 @@ export const login = async (req, res) => {
     const token = jwt.sign(
       { username: username, role : user.role },        
       process.env.JWT_SECRET,       
-      { expiresIn: "1h" }          
+      { expiresIn: "24h" }          
     );
 
     // res.cookie("token", token, {

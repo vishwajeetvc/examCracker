@@ -69,7 +69,7 @@ export const addNewSubject = async (req, res) => {
   // POST /api/catalogue/:standard/subject
   // Body : {
   //   "subject" : "English"
-  //   "chapters" : ["The Lion King", "Linear Equation", "The Moon"]
+  //   "chapters" : [{title : "The Lion King", ref : id || null},{..}, {..}]
   // }
   
   try {
@@ -88,12 +88,8 @@ export const addNewSubject = async (req, res) => {
       }
     );
 
-    if (result.matchedCount === 0) {
-      return res.status(404).send({ message: "Standard not found" });
-    }
-
-    if (result.modifiedCount === 0) {
-      return res.status(409).send({ message: "Subject already exists" });
+    if (result.modifiedCount === 0 && result.matchedCount === 0) {
+      return res.status(409).send({ message: "Something went wrong" });
     }
 
     res.status(200).send({message : "Success"});
@@ -147,7 +143,7 @@ export const addChapter = async (req, res) => {
       },
       {
         $addToSet: {
-          "subjects.$.chapters": chapter
+          "subjects.$.chapters": { title : chapter }
         }
       }
     );
@@ -163,7 +159,7 @@ export const addChapter = async (req, res) => {
     res.status(200).send({ message: "Chapter added successfully" });
 
   } catch (error) {
-    res.status(500).send({
+    res.status(500).send({ error,
       message: "Something went wrong while adding chapter.",
     });
   }
@@ -182,7 +178,7 @@ export const deleteChapter = async (req, res) => {
       },
       {
         $pull: {
-          "subjects.$.chapters": chapter
+          "subjects.$.chapters": { title : chapter }
         }
       }
     );

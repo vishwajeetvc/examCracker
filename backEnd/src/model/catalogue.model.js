@@ -1,18 +1,5 @@
 import mongoose from 'mongoose'
 
-// dummy
-// const catalogue = [
-//   {
-//     standared : "12th",
-//     subjects : [
-//       {subject : "English", chapters : ["1.king", "2.Queen"]},
-//       {subject : "Hindi", chapters : ["1.king", "2.Queen"]},
-//       {subject : "Science", chapters : ["1.king", "2.Queen"]},
-//       {subject : "Physics", chapters : ["1.king", "2.Queen"]},
-//     ]
-//   },
-// ]
-
 const catalogueSchema = new mongoose.Schema({
   standard : {
     type : String,
@@ -27,13 +14,35 @@ const catalogueSchema = new mongoose.Schema({
       required : true,
     },
     chapters : {
-      type : [String],
+      type : [
+        {
+          title : String, 
+          ref : { 
+            type : mongoose.Schema.Types.ObjectId,
+            ref : 'Mcq',
+            default : null
+          },
+        }
+      ],
       default : [],
       required : true,
     } 
   }]
 })
 
-const Catalogue = mongoose.model('Catelogue', catalogueSchema);
+const Catalogue = mongoose.model('Catalogue', catalogueSchema);
 export default Catalogue;
+
+
+// dummy
+// const catalogue = [
+//   {
+//     standared : "12th",
+//     subjects : [
+//       {subject : "English", chapters : [{title : "hi" , ref : id || null}},
+//       {subject : "English", chapters : [{title : "hi" , ref : id || null}},
+//       {subject : "English", chapters : [{title : "hi" , ref : id || null}},
+//     ]
+//   },
+// ]
 

@@ -1,0 +1,451 @@
+{
+  "info": {
+    "_postman_id": "ca70b406-15d0-411f-97f6-7d216cd11d90",
+    "name": "ExamCracker",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "catalogue",
+      "item": [
+        {
+          "name": "Get Catalogue",
+          "id": "55ed2690-f344-4426-8f69-73e87a57631a",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{server}}/api/catalogue",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "api",
+                "catalogue"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add standard",
+          "id": "241ed5fa-df8a-403c-af5b-9e539114d0a2",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2OTc4NTk5OSwiZXhwIjoxNzY5ODcyMzk5fQ.vWhFdJdYJY8Hp3qq3Kz7AjG8EmmqigMWpRWITEL9eHc",
+                "type": "text",
+                "uuid": "bcacdc9b-97fe-4b9d-a519-81a49939a6de"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"standard\": \"5234th\",\n    \"data\": {\n        \"subject\": \"English\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/api/catalogue/standard",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "api",
+                "catalogue",
+                "standard"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Standard",
+          "id": "9b95a55d-fc35-4048-baa7-48fee9a52e3e",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2OTc2NzEyMiwiZXhwIjoxNzY5ODUzNTIyfQ.jpYo39pkQvkfJznCojgNUCcojJRmJNkBanx6GPKuDes",
+                "type": "text",
+                "uuid": "c3dc0221-04bb-4851-b805-35194ae927ca"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"subject\": \"geography\",\n    \"chapters\": [\n        {\"title\" : \"The Lion King\" },\n        {\"title\" : \"Panchtantra\"},\n        {\"title\" : \"The Old King\" },\n        {\"title\" : \"Bad fish\" }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/api/catalogue/10th",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "api",
+                "catalogue",
+                "10th"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add subject",
+          "id": "f9165476-21cb-492b-837c-b578a604f49c",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2OTc2NzEyMiwiZXhwIjoxNzY5ODUzNTIyfQ.jpYo39pkQvkfJznCojgNUCcojJRmJNkBanx6GPKuDes",
+                "type": "text",
+                "uuid": "c3dc0221-04bb-4851-b805-35194ae927ca"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"subject\": \"geography\",\n    \"chapters\": [\n        {\"title\" : \"The Lion King\"  },\n        {\"title\" : \"Panchtantra\"},\n        {\"title\" : \"The Old King\" },\n        {\"title\" : \"Bad fish\" }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/api/catalogue/9th/subject",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "api",
+                "catalogue",
+                "9th",
+                "subject"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete subject",
+          "id": "3bd24565-f29e-4b5e-b454-e9c14b64e815",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2OTc2NzEyMiwiZXhwIjoxNzY5ODUzNTIyfQ.jpYo39pkQvkfJznCojgNUCcojJRmJNkBanx6GPKuDes",
+                "type": "text",
+                "uuid": "c3dc0221-04bb-4851-b805-35194ae927ca"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"subject\": \"geography\",\n    \"chapters\": [\n        {\"title\" : \"The Lion King\" },\n        {\"title\" : \"Panchtantra\"},\n        {\"title\" : \"The Old King\" },\n        {\"title\" : \"Bad fish\" }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/api/catalogue/9th/English",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "api",
+                "catalogue",
+                "9th",
+                "English"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add chapter",
+          "id": "123fb02e-9367-487b-a240-7e1377fed9e5",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2OTc2NzEyMiwiZXhwIjoxNzY5ODUzNTIyfQ.jpYo39pkQvkfJznCojgNUCcojJRmJNkBanx6GPKuDes",
+                "type": "text",
+                "uuid": "c3dc0221-04bb-4851-b805-35194ae927ca"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/api/catalogue/9th/geography/Murphty",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "api",
+                "catalogue",
+                "9th",
+                "geography",
+                "Murphty"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete chapter",
+          "id": "b8319cd5-d3fa-4387-addb-d50702d0cb01",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2OTc2NzEyMiwiZXhwIjoxNzY5ODUzNTIyfQ.jpYo39pkQvkfJznCojgNUCcojJRmJNkBanx6GPKuDes",
+                "type": "text",
+                "uuid": "c3dc0221-04bb-4851-b805-35194ae927ca"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"subject\": \"geography\",\n    \"chapters\": [\n        {\"title\" : \"The Lion King\" },\n        {\"title\" : \"Panchtantra\"},\n        {\"title\" : \"The Old King\" },\n        {\"title\" : \"Bad fish\" }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/api/catalogue/9th/geography/The starts",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "api",
+                "catalogue",
+                "9th",
+                "geography",
+                "The starts"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "76c6612e-8820-4b5d-a238-5452b2ee3a96"
+    },
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "register",
+          "id": "04672bcd-4d99-4b6e-a583-5e0636c7631d",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"username\" : \"vcnvim@gmail.com\",\n    \"password\" : \"12345678\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/api/users/register",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "id": "9c0960b0-3a36-422f-866e-8257e61ad7b2",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"username\" : \"vcnvim@gmail.com\",\n    \"password\" : \"12345678\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/api/users/login",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login (admin)",
+          "id": "d3a09327-eb81-425d-b44b-8113d57f2f61",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"username\" : \"admin@admin.com\",\n    \"password\" : \"12345678\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/api/users/login",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "9c7f8b91-cd02-4468-ab92-e8a18e5c2ecf"
+    },
+    {
+      "name": "Mcqs",
+      "item": [
+        {
+          "name": "Getmcq by of a chapter.",
+          "id": "cb27817d-6c02-453a-8503-fb77d9d7d617",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/api/mcq/697cce0d7a01d5039b3112a6",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "api",
+                "mcq",
+                "697cce0d7a01d5039b3112a6"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add multiple questions.",
+          "id": "d2d05b1d-e22a-4166-a887-980a56911513",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"questions\" : [\n        { \"q\" : \"What is your name\", \"options\" : [\"ram\",\"lak\"], \"answer\" : \"3\" },\n        { \"q\" : \"What is your name\", \"options\" : [\"ram\",\"lak\"], \"answer\" : \"3\" },\n        { \"q\" : \"What is your name\", \"options\" : [\"ram\",\"lak\"], \"answer\" : \"3\" }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/api/mcq/10th/Hindi/697ccaaae87dd84170cf629c",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "api",
+                "mcq",
+                "10th",
+                "Hindi",
+                "697ccaaae87dd84170cf629c"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add single question.",
+          "id": "0187a9f5-a0dc-4532-9b61-d0e3ff3260c5",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2OTc4NTk5OSwiZXhwIjoxNzY5ODcyMzk5fQ.vWhFdJdYJY8Hp3qq3Kz7AjG8EmmqigMWpRWITEL9eHc",
+                "type": "text",
+                "uuid": "f9dcbc95-292d-4967-9a25-addf7df0fe85"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"question\": {\n        \"q\": \"Ram\",\n        \"options\": [\n            \"yellow\",\"green\"\n        ],\n        \"answer\": \"3\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{server}}/api/mcq/697cce0d7a01d5039b3112a6",
+              "host": [
+                "{{server}}"
+              ],
+              "path": [
+                "api",
+                "mcq",
+                "697cce0d7a01d5039b3112a6"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "58f81def-8bdd-478a-9954-451611033154"
+    }
+  ]
+}
