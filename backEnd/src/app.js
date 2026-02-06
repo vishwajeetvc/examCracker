@@ -21,4 +21,5 @@ app.get('/', authMiddleware, (_req, res)=>{
 
 export default app;
 
-// Once index is create using mongoose you have to delete it mannually.
+// Once index, in mongodb, is create using mongoose you have to delete it mannually.
+

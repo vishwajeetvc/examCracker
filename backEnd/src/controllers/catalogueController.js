@@ -103,12 +103,13 @@ export const deleteSubject = async (req, res) => {
   try {
     const { standard, subject } = req.params;
 
+
     const result = await Catalogue.updateOne(
       { standard },
       {
         $pull: {
           subjects: {
-            subject: { $regex: new RegExp(`^${subject}$`, "i") }
+            subject: subject
           }
         }
       }
