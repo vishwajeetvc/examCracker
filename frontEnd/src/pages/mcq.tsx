@@ -41,7 +41,7 @@ function Mcq() {
       {/**/}      
 
 
-        Ankit
+        Ankit kumar
 
 
       {/**/}      
