@@ -38,8 +38,6 @@ function Mcq() {
           src={ncert} alt="ncert_log"/>
       </div>
 
-<<<<<<< HEAD
-=======
       {/**/}      
 
 
@@ -47,7 +45,6 @@ function Mcq() {
 
 
       {/**/}      
->>>>>>> refs/remotes/origin/main
       <div>
         <Question 
           ticked={ticked}
