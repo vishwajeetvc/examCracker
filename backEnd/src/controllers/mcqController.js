@@ -4,7 +4,6 @@ import mongoose from 'mongoose';
 
 export const getMcqs = async (req, res) => {
   try {
-
     const { chapterId } = req.params;
     const mcqs = await Mcq.findById( chapterId );
 

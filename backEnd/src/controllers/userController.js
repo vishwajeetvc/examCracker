@@ -105,7 +105,7 @@ export const login = async (req, res) => {
 }
 
 export const logout = (_req, res) => {
-  res.send("User put");
+  res.send("Something went wrong");
 }
 
 export const deleteUser = (_req, res) => {

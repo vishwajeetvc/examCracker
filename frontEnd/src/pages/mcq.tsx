@@ -12,7 +12,7 @@ function Mcq() {
   const [clicked, setClicked] = useState(false);
 
   useEffect(()=>{
-    fetch(`http://192.168.1.54:4000/api/mcq/${id}`)
+    fetch(`https://examcracker.onrender.com/api/mcq/${id}`)
     .then(resp => resp.json())
     .then(data => {
         const questions = data.mcqs.questions.map((item : any) => {

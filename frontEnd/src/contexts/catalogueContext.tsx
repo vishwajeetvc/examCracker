@@ -12,7 +12,7 @@ export default function CatalogueContextProvider(
   // console.log(data)
 
   useEffect(()=>{
-    fetch('http://192.168.1.54:4000/api/catalogue')
+    fetch('https://examcracker.onrender.com/api/catalogue')
     .then(resp => resp.json())
     .then(data => setData(data))
   },[])

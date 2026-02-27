@@ -175,7 +175,7 @@ export const deleteChapter = async (req, res) => {
     const result = await Catalogue.updateOne(
       {
         standard,
-        "subjects.subject": { $regex: new RegExp(`^${subject}$`, "i") }
+        "subjects.subject": subject
       },
       {
         $pull: {
