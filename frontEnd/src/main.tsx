@@ -6,6 +6,7 @@ import App from './App.tsx'
 import Mcq from './pages/mcq.tsx'
 import NavContextProvider from './contexts/navContext.tsx'
 import CatalogueContextProvider from './contexts/catalogueContext.tsx'
+import AuthCard from './pages/authcard.tsx'
 
 
 createRoot(document.getElementById('root')!).render(
@@ -16,6 +17,7 @@ createRoot(document.getElementById('root')!).render(
           <Routes>
             <Route index element={<App />} />
             <Route path="/mcq/:id" element={<Mcq/>} />
+            <Route path="/account" element={<AuthCard/>} />
           </Routes>
         </BrowserRouter>
       </NavContextProvider>
